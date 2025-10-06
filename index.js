@@ -4,7 +4,7 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const { creerUtilisateur, listerUtilisateurs, modifierUtilisateur, supprimerUtilisateur, bloquerUtilisateur, debloquerUtilisateur, deconnecter } = require("./controllers/utilisateurController");
 const { effectuerDepot } = require("./controllers/transactionController");
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/bank";
+const MONGODB_URI = "mongodb+srv://amycollesck_db_user:M85Nz1RHQ5zC52BG@cluster0.moht29u.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 mongoose.connect(MONGODB_URI).then(()=>{
     console.log("Connecté à MongoDB");
 }).catch(err =>console.error("Erreur de connexion MongoDB", err))
