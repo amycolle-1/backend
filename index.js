@@ -10,7 +10,7 @@ mongoose.connect(MONGODB_URI).then(()=>{
 }).catch(err =>console.error("Erreur de connexion MongoDB", err))
 
 const app = express();
-const CORS_ORIGIN = process.env.CORS_ORIGIN || "http://localhost:3000";
+const CORS_ORIGIN =  "https://minibankagent.netlify.app";
 app.use(cors({
   origin: CORS_ORIGIN
 }));
